@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 15:36:57 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/06 18:03:51 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 10:24:26 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 int ft_printf(const char * str, ...)
 {
 	va_list arguments;
+	int a;
 	int *countc;
 
 	va_start(arguments, str);
-	countc = malloc(sizeof(int) * 1);
-	*countc = 0;
+	a = 0;
+	countc = &a;
 	while (*str != '\0')
 	{
 		if (*str != '%' && *str != '\0')
 		{
-			*countc += ft_putchar(*str);
+			a += ft_putchar(*str);
 		}
 		else
 		{
@@ -34,5 +35,5 @@ int ft_printf(const char * str, ...)
 		str++;
 	}
 	va_end(arguments);
-	return(*countc);
+	return(a);
 }
