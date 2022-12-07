@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 14:45:31 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/06 19:31:01 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:11:08 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void ft_secondcheck (va_list args, int *count, const char *str)
 	{
 		write(1, "0x", 2);
 		*count += 2;
-		ft_puthexal(va_arg(args, int), count);
+		ft_putpointer(va_arg(args, unsigned long), count);
 	}
 }

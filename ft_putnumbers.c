@@ -6,21 +6,15 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 13:12:18 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/06 19:32:08 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:11:44 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_puthexau(int n, int *i)
+void	ft_puthexau(unsigned int n, int *i)
 {
-	if (n < 0)
-	{
-		*i += ft_putchar('-');
-		n = n * (-1);
-		ft_puthexau(n, i);
-	}
-	else if (n > 15)
+	if (n > 15)
 	{
 		ft_puthexau(n / 16, i);
 		ft_puthexau(n % 16, i);
@@ -29,15 +23,9 @@ void	ft_puthexau(int n, int *i)
 		*i += ft_putchar("0123456789ABCDEF"[n]);
 }
 
-void	ft_puthexal(int n, int *i)
+void	ft_puthexal(unsigned int n, int *i)
 {
-	if (n < 0)
-	{
-		*i += ft_putchar('-');
-		n = n * (-1);
-		ft_puthexal(n, i);
-	}
-	else if (n > 15)
+	if (n > 15)
 	{
 		ft_puthexal(n / 16, i);
 		ft_puthexal(n % 16, i);
@@ -77,4 +65,14 @@ void	ft_putnbr(int n, int *i)
 	}
 	else if (n < 10)
 		*i += ft_putchar(n + '0');
+}
+void	ft_putpointer(unsigned long n, int *i)
+{
+	if (n > 15)
+	{
+		ft_putpointer(n / 16, i);
+		ft_putpointer(n % 16, i);
+	}
+	else if (n < 16)
+		*i += ft_putchar("0123456789abcdef"[n]);
 }

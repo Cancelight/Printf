@@ -11,7 +11,8 @@ int ft_printstr(char *s)
 {
 	int ret = 0;
 	char c;
-
+	if (s == NULL)
+		return(ft_printstr("(null)"));
 	while(*s)
 	{
 		c = *s++;
@@ -27,8 +28,6 @@ int	ft_strlength(const char *s)
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
