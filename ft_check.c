@@ -6,13 +6,13 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:31:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/06 19:32:53 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:34:39 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_check (va_list args, int *count, const char *str)
+void	ft_check(va_list args, int *count, const char *str)
 {
 	if (*str == '%')
 	{
@@ -22,7 +22,7 @@ void ft_check (va_list args, int *count, const char *str)
 	{
 		*count += ft_putchar(va_arg(args, int));
 	}
-	else if(*str == 's')
+	else if (*str == 's')
 	{
 		*count += ft_printstr(va_arg(args, char *));
 	}

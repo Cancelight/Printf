@@ -6,13 +6,13 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 14:45:31 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/07 12:11:08 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:48:31 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_secondcheck (va_list args, int *count, const char *str)
+void	ft_secondcheck(va_list args, int *count, const char *str)
 {
 	if (*str == 'x')
 		ft_puthexal(va_arg(args, int), count);

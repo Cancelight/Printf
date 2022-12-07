@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 13:12:18 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/07 12:11:44 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:32:38 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	ft_putnbr(int n, int *i)
 	else if (n < 10)
 		*i += ft_putchar(n + '0');
 }
+
 void	ft_putpointer(unsigned long n, int *i)
 {
 	if (n > 15)

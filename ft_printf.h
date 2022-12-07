@@ -6,19 +6,20 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:42:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/07 11:53:05 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:47:44 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
+# define FT_PRINTF_H
+
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_printf(const char *str, ...);
 void	ft_check(va_list args, int *count, const char *str);
-void	ft_secondcheck (va_list args, int *count, const char *str);
+void	ft_secondcheck(va_list args, int *count, const char *str);
 void	ft_puthexau(unsigned int n, int *i);
 void	ft_puthexal(unsigned int n, int *i);
 void	ft_unint(unsigned int n, int *i);
