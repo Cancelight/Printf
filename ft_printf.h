@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:42:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/12/07 13:47:44 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/12/08 13:48:41 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdlib.h>
 
 int		ft_printf(const char *str, ...);
 void	ft_check(va_list args, int *count, const char *str);

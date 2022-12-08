@@ -14,7 +14,7 @@ all:	$(NAME)
 %.o: %.c $(HEADER)
 		$(CC) $(CFLAGS) -c $<
 $(NAME):	$(OBJ_FILES)
-		ar crs $(NAME) $(OBJ_FILES)
+		ar rc $(NAME) $(OBJ_FILES)
 clean:
 	$(RM) $(OBJ_FILES)
 fclean: clean
